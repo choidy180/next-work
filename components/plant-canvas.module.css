@@ -1,0 +1,15 @@
+/* components/plant-canvas.module.css */
+@keyframes blink {
+  0%, 100% { opacity: 1 }
+  50% { opacity: 0.25 }
+}
+
+.blink {
+  animation: blink 1s linear infinite;
+}
+
+/* critical에서 클래스 기반 색을 덮어쓸 수 있도록 */
+.forceFill {
+  fill: #ef4444 !important;
+  stroke: #ef4444 !important;
+}

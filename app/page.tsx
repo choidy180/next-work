@@ -1,29 +1,22 @@
 "use client";
-import ContentInnerFlexBasic40 from "@/components/content-inner-flex-basic-40";
-import ContentInnerFlexBasic60 from "@/components/content-inner-flex-basic-60";
+import PlantLayout from "@/components/factory";
+import DynamicFullScreenGlbViewer from "@/components/full-screen-glb-viewer";
+import PlantLayoutComp from "@/components/icons/PlantLayout";
+import PlantLayoutDataDriven from "@/components/icons/PlantLayoutDataDriven";
+import PlantCanvas from "@/components/PlantCanvas";
 import styled from "styled-components";
 
-const items = [
-  {title: 'Vision Camera_1', image: ''},
-  {title: 'Vision Camera_2', image: ''}
-]
-
-const items2 = [
-  {
-    item1: '2025-08-07 01:23:45', item2: '양품', item3: '양품', item4: '양품'
-  },
-  {
-    item1: '2025-08-05 01:23:45', item2: '양품', item3: '불량', item4: '불량'
-  },
-]
-
-const head = ['시간', '1번 카메라', '2번 카메라', '양/불', '보기'];
 
 export default function Home() {
+  const modelPath: string = '/test-v1.glb';
   return (
     <Section>
-      <ContentInnerFlexBasic60 items={items}/>
-      <ContentInnerFlexBasic40 headItems={head} items={items2}/>
+      {/* <PlantLayout width="100%" height="auto" ariaLabel="공정 배치도" /> */}
+      {/* <PlantLayout/> */}
+      {/* <PlantLayoutComp/> */}
+      {/* <PlantLayoutDataDriven/> */}
+      {/* <PlantCanvas/> */}
+      <DynamicFullScreenGlbViewer glbUrl={modelPath} />
     </Section>
   );
 }
